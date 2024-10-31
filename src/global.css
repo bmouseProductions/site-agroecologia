@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'tcf_noli_light';
+    src: url('./assets//fonts/tcfnoli-light-webfont.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tcf_noli_medium';
+    src: url('./assets//fonts/tcfnoli-medium-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tcf_noli_bold';
+    src: url('./assets//fonts/tcfnoli-bold-webfont.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: #2c2c2c;
+    font-family: tcf_noli_light;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+
+.title {
+    font-family: tcf_noli_bold;
+}
+
+.sub-title {
+    font-family: tcf_noli_medium;
+}
+
+.bg-plantação {
+    background-image: url(./assets/images/bg-plantacao.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.swiper-button-prev, .swiper-button-next, .swiper-pagination {
+    color: #eece38;
+}
+
+.swiper-pagination-bullet {
+    background-color: #eece38;
+}
+
+@media screen and (max-width: 767px) {
+    .swiper-button-prev, .swiper-button-next {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1040px) {
+    *{
+        font-size: 18px;
+    }
+}
+
+p.ul-description ul{
+    list-style: disc;
+    padding-left: 20px;
+}
