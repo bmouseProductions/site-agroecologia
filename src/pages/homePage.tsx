@@ -94,12 +94,12 @@ export default function Home() {
                     <img 
                         src={mulherPlantando}
                         alt="mulher plantando"
-                        className="mx-auto w-[90%] sm:w-full "
+                        className="mx-auto w-[90%] sm:w-full rounded"
                     />
                     <img 
                         src={peixe}
                         alt="peixe nadando no mar"
-                        className="w-[100px] sm:w-[150px] absolute top-[-50px] left-0 sm:left-[-100px] border-b-8 border-r-8 border-white"
+                        className="w-[100px] sm:w-[150px] absolute top-[-50px] left-0 sm:left-[-100px] border-b-8 border-r-8  border-white"
                     />
                 </div>
             </section>
@@ -149,7 +149,7 @@ export default function Home() {
                                     <div className="mx-auto w-full md:w-[90%] relative z-50">
                                         <iframe
                                             className="mx-auto w-full max-w-[900px] h-[180px] md:h-[380px] lg:h-[450px]  rounded-xl"
-                                            src="https://www.youtube.com/embed/W9tJcj3lqbc?si=-sbnu_L4gsjIldoe"
+                                            src="https://www.youtube.com/embed/Yh1_G0gcZjA?si=T4JtuxP0rurUDEry"
                                             title="YouTube video player"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         />
@@ -165,7 +165,7 @@ export default function Home() {
             <section className="bg-plantação">
                 <div className="w-full backdrop-brightness-50 ">
                     <div className="container mx-auto py-10 px-5 md:px-10 xl:px-20">
-                        <div className="w-full md:max-w-3xl px-5 py-10 md:px-10 md:py-16 bg-stone-100 ">
+                        <div className="w-full md:max-w-3xl px-5 py-10 md:px-10 md:py-16 bg-stone-100 rounded ">
                             <h2 className="text-4xl md:text-5xl title mb-5 md:mb-10">
                                 Biopolímeros de Origem Marinha
                             </h2>
@@ -241,7 +241,7 @@ export default function Home() {
                                         />
 
                                         <NavLink 
-                                            to=''
+                                            to={`/produto/${product.name.toLowerCase().replace(/\s+/g, '').replace(/[áàâãä]/g, 'a').replace(/[éêë]/g, 'e').replace(/[íîï]/g, 'i').replace(/[óòôõö]/g, 'o').replace(/[úùûü]/g, 'u')}`}
                                             className='p-5 w-full absolute inset-0 flex flex-col justify-end bg-gradient-to-b from-transparent to-black rounded text-white hover:text-[#eece38] '
                                         >
                                             <span className='text-xl text-white  sub-title'>

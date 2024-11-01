@@ -22,7 +22,7 @@ export default function AppRouter(){
                     {products.map((product, index) =>(
                         <Route 
                             key={index} 
-                            path={`/produto/${product.name.toLowerCase().replace(/\s+|[áàâãäéêëíîïóòôõöúùûü]/g, '')}`} 
+                            path={`/produto/${product.name.toLowerCase().replace(/\s+/g, '').replace(/[áàâãä]/g, 'a').replace(/[éêë]/g, 'e').replace(/[íîï]/g, 'i').replace(/[óòôõö]/g, 'o').replace(/[úùûü]/g, 'u')}`} 
                             element={<ProductDetails product={product} />} 
                         />
                     ))}

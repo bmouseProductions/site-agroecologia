@@ -32,14 +32,15 @@ export default function ProductsPage() {
             <section className='container mx-auto py-14 md:py-20 px-5 md:px-10 xl:px-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
                 {products.map((product, index) => (
                     <div key={index} className=' px-5 py-7 bg-[#f8f6ef] shadow-lg border rounded-lg'>
-                        <img src={product.image} alt={`Imagem do produto ${product.name}`} />
+                        <img src={product.image} alt={`Imagem do produto ${product.name}`} className='rounded' />
+                        
                         <h3 className='mt-3 text-2xl sub-title text-center'>
                             {product.name}
                         </h3>
 
                         <div className='w-full flex justify-center'>
                             <NavLink 
-                                to={`/produto/${product.name.toLowerCase().replace(/\s+|[áàâãäéêëíîïóòôõöúùûü]/g, '')}`} 
+                                to={`/produto/${product.name.toLowerCase().replace(/\s+/g, '').replace(/[áàâãä]/g, 'a').replace(/[éêë]/g, 'e').replace(/[íîï]/g, 'i').replace(/[óòôõö]/g, 'o').replace(/[úùûü]/g, 'u')}`} 
                                 className='w-fit mt-2 mx-auto py-2 px-3.5 hover:text-white font-semibold bg-[#f2a922] hover:bg-[#1c7521] border transition-all'
                             >
                                 Saiba mais
